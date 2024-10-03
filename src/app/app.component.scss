@@ -1,0 +1,38 @@
+.main-container {
+  display: flex;
+  
+  .side-nav {
+    width: 350px;
+    min-width: 230px;
+    min-height: calc(100vh - 70px);
+    background-color: #113c60;
+    color: #fff;
+    box-shadow: 5px 5px 5px #939393;
+    transition: width 0.3s ease; 
+    &.closed {
+      width: 100px; 
+    }
+
+    .toggle-btn {
+      background-color: #113c60;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    @media only screen and (max-width: 1300px) {
+      width: 100px;
+      min-width: 100px;
+    }
+  }
+
+  .main {
+    flex-grow: 1;
+    padding: 30px;
+    transition: margin-left 0.3s ease; 
+    &.full-width {
+      margin-left: 0; 
+    }
+  }
+}

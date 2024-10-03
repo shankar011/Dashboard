@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dashboard';
+
+  title: string = "Dashboard"
+  isSidebarOpen: boolean = true; 
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen; 
+  }
 }
